@@ -1,0 +1,89 @@
+.projects-list .service {
+    color: var(--main-color);
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+    margin-top: 0px;
+    margin-bottom: 4px;
+}
+
+.portfolio-list {
+    padding: 20px 24px;
+    border-top: 0;
+    border-left: 1px solid #ececec;
+    border-right: 1px solid #ececec;
+    border-bottom: 1px solid #ececec;
+}
+
+.projects-list .descrip {
+    color: var(--grey);
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.9;
+    letter-spacing: 0.03em;
+}
+
+.projects-list .projects-list__link {
+    text-decoration: none;
+    display: block;
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+&:hover,
+   &:focus {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+    }
+}
+
+.projects-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.projects-list__card {
+    width: calc((100% - 60px) / 3);
+    background-color: var(--white);
+}
+
+
+
+.projects-list:nth-child(3n) {
+    margin-right: 0;
+}
+
+.overlay-box {
+    position: relative;
+    overflow: hidden;
+}
+
+.overlay-text {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.55;
+    text-align: left;
+    color: var(--white);
+    margin: 0;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 63px 24px;
+    background-color: rgba(33, 150, 243, 0.9);
+    transform: translateY(100%);
+    opacity: 0;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.projects-list .projects-list__link:hover .overlay {
+    transform: translateY(0);
+    opacity: 1;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
