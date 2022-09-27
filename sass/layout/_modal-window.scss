@@ -9,6 +9,14 @@
     top: 0;
     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
         visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+        @media screen and(max-width: 767px) {
+            .backdrop {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            }
+}
 }
 
 .backdrop.is-hidden {
@@ -22,18 +30,35 @@
 }
 
 .modal {
-    height: 581px;
-    width: 528px;
-    min-height: 581px;
+   // height: 581px;
+    //width: 528px;
+    //min-height: 581px;
     background-color: var(--white);
+   // position: absolute;
+   // left: 50%;
+   // top: 50%;
+    //transform: translate(-50%, -50%) scale(1);
+    border-radius: 4px;
+   // transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+   // padding: 40px;
+
+   @media screen and(min-width: 768px) {
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(-50%, -50%) scale(1);
-    border-radius: 4px;
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    width: 450px;
+    height: 609px;
     padding: 40px;
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+   }
+
+   @media screen and(min-width: 1200px) {
+    width: 528px;
+    height: 581px;
+  }
 }
+
 
 .close-btn {
     position: absolute;
@@ -224,4 +249,4 @@ textarea {
     letter-spacing: 0.01em;
     text-align: left;
     color: var(--grey);
-}
+ }
