@@ -8,14 +8,29 @@
 }
 
 .page-header__container {
+  .page-header__container {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding-left: 15px;
-    padding-right: 15px;
-  
-    @media screen and (max-width: 767px) {
-      max-width: 767px;
+  background-color: gold;
+    @media screen and (min-width: 1200px) {
+        /* laptop */
+        body {
+          background: red;
+        } 
+      }
+      
+      @media screen and (max-width: 320px) {
+        /* mobileS */
+        & {background-color: yellow;}
+        /*.page-header__container {
+            display: none;
+        }*/
+        
+
+        
+            
+        
+      }
     }
 }
 
