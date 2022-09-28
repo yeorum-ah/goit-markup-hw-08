@@ -1,5 +1,6 @@
 (() => {
-    const menuBtnRef = document.querySelector("[data-menu-button]");
+  console.error(1); 
+  const menuBtnRef = document.querySelector("[data-menu-button]");
     const mobileMenuRef = document.querySelector("[data-menu]");
     const mobileBtnClose = document.querySelector("[data-menu-close]");
   
