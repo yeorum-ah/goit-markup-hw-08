@@ -1,5 +1,6 @@
 @import './utils/variables';
 @import './utils/visually-hidden';
+@import './utils/placeholders';
 
 @import './base/common';
 @import './base/section';
@@ -10,9 +11,6 @@
 @import './components/footer-btn';
 @import './components/portfolio-btn';
 @import './components/submit-btn';
-
-
-
 
 @import './layout/header';
 @import './layout/hero';

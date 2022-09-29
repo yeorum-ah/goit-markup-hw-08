@@ -1,24 +1,18 @@
-.features {
-    padding-top: 60px;
-    padding-bottom: 60px;
-  
-    @media screen and (min-width: 1200px) {
-      padding-top: 94px;
-      padding-bottom: 94px;
-    }
-    @media screen and (max-width: 479px) {
-      padding-left: 15px;
-      padding-right: 15px;
-    }
-  }
 .features-list__desc {
     color: var(--grey);
     font-family: 'Roboto';
     font-weight: 400;
     font-size: 14px;
-    line-height: 1.7;
+    line-height: 1.71;
     margin-top: 0px;
     margin-bottom: 0px;
+    text-align: center;
+    width: 450px;
+
+
+    @media screen and(max-width: 767px) {
+        text-align: center;
+      }
 }
 
 .features-list__title {
@@ -28,20 +22,34 @@
     text-transform: uppercase;
     margin-top: 0px;
     margin-bottom: 10px;
-    margin-bottom: 10px;
-
-    @media screen and (min-width: 768px) {
-        text-align: left;
+    text-align: center;
+    width: 450px;
+    @media screen and(max-width: 767px) {
+        text-align: center;
       }
+    
+
 }
 
 .features-list {
-    display: flex;
-    gap: 30px;
+    //  display: flex;
+    //  gap: 30px;
 
-    &:nth-child(4) {
-        margin-right: 0px;
+    // &:nth-child(4) {
+    //     margin-right: 0px;
+    // }
+    // @extend %ul;
+
+    @media screen and(min-width:768px) {
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: calc(-1 * 30px);
+      margin-left: calc(-1 * 30px);
     }
+    @media screen and(min-width:1200px) {
+      flex-wrap: nowrap;
+    }
+  
 }
 
 .features-list>.features-list__card {
@@ -49,24 +57,34 @@
     margin-right: 0;
 }
 
+.features-list__card {
+    width: 450px;
+    text-align: center;
+    justify-content: center;
+    @media screen and(max-width: 767px) {
+      margin-bottom: 30px;
+    }
+  
+    @media screen and(min-width:768px) {
+      flex-basis: calc((100% - 60px) / 2);
+      margin-top: 30px;
+      margin-left: 30px;
+    }
+  
+    @media screen and(min-width:1200px) {
+      width: calc((100% - 120px) / 4);
+    }
+  }
+
 .features-list__wrapper {
     background-color: #f5f4fa;
-    width: 270px;
+    width: 450px;
     height: 120px;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 30px;
     border-radius: 4px;
-    @media screen and (min-width: 480px) {
-        width: 450px;
-      }
-      @media screen and (min-width: 768px) {
-        width: 354px;
-      }
-      @media screen and (min-width: 1200px) {
-        width: 270px;
-      }
 }
 
 .features-list__icon {
